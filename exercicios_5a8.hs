@@ -1,3 +1,112 @@
+{- Questão 1
+
+Qual é o tipo de cada uma das seguintes expressões?
+
+a) "squid" ++ "clam"
+
+No GHCi:
+:t "squid" ++ "clam"
+
+Resultado:
+[Char]
+
+Explicação:
+O operador (++) concatena listas. Como String em Haskell é
+uma lista de caracteres ([Char]), o resultado possui tipo
+[Char].
+
+b) [True, False, True, True]
+
+No GHCi:
+:t [True, False, True, True]
+
+Resultado:
+[Bool]
+
+Explicação:
+Todos os elementos da lista são do tipo Bool.
+
+c) [True, False, 'a']
+
+No GHCi:
+:t [True, False, 'a']
+
+Resultado:
+Erro de tipo.
+
+Explicação:
+Uma lista deve conter elementos do mesmo tipo.
+True e False são Bool, enquanto 'a' é Char.
+
+d) (True, False, 'a')
+
+No GHCi:
+:t (True, False, 'a')
+
+Resultado:
+(Bool, Bool, Char)
+
+Explicação:
+Como é uma tupla, ela pode armazenar elementos de tipos
+diferentes.
+
+-}
+
+{- Questão 2
+
+Escreva uma função em Haskell para encontrar o cubo de
+um valor do tipo Double.
+
+Tipo da função:
+
+cube :: Double -> Double
+
+-}
+
+cube :: Double -> Double
+cube x = x * x * x
+
+{- A função recebe um valor do tipo Double e retorna
+o cubo desse valor. -}
+
+{- Questão 3
+
+Escreva uma função em Haskell que receba três valores
+do tipo Double e retorne a soma desses valores.
+
+Tipo da função:
+
+sum3 :: Double -> Double -> Double -> Double
+
+-}
+
+sum3 :: Double -> Double -> Double -> Double
+sum3 x y z = x + y + z
+
+{- A função recebe três valores do tipo Double e
+retorna a soma desses valores. -}
+
+{- Questão 4
+
+Escreva uma função em Haskell para calcular o valor da
+função:
+
+f(x) = ax² + bx + c
+
+Tipo da função:
+
+quadratica :: Double -> Double -> Double -> Double -> Double
+
+-}
+
+quadratica :: Double -> Double -> Double -> Double -> Double
+quadratica a b c x = a * x^2 + b * x + c
+
+{- A função recebe os coeficientes a, b, c e o valor
+de x, retornando o resultado da função quadrática. -}
+
+
+
 -- ============================================
 -- Questão 5 - Inverter uma lista
 -- ============================================
@@ -67,7 +176,7 @@ main = do
 
 {- =========================================================
 
-Tipos das expressões da Questão 4
+Tipos das expressões da Questão 8
 
 my_const
     :: a -> b -> a
